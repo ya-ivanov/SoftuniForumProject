@@ -53,6 +53,10 @@ class TopicsService{
         $this->manager->decreaseAnswers($id);
     }
 
+    function searchTopics($text){
+        return $this->manager->search($text);
+    }
+
     function getTopicsByCategoryId($id){
         return $this->manager->getTopicsByCategoryId($id);
     }

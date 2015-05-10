@@ -52,13 +52,14 @@
                 case "editAnswer":
                     include 'views/editAnswer.php';
                     break;
+                case "allTopics":
+                    include 'views/allTopics.php';
+                    break;
                 case "admin":
                  if(!$user || !$user->isAdmin()){
                     header('Location: index.php?page=main');
-                    //include 'views/main.php';
                  } else {
                      include 'views/admin.php';
-
                  }
                 break;
                 case "main":

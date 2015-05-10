@@ -411,7 +411,15 @@ li > a{
     text-decoration: underline;
 }
 
-
+#searchInput{
+    background: #697081;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    color: lightgrey;
+    font-family: 'Source Sans Pro','Arial','Helvetica',sans-serif;
+    padding-left: 3px;
+}
 
 
 

@@ -112,7 +112,21 @@ class TopicsManager{
         $query->execute();
     }
 
-
+    function search($queryText){
+        $queryString = "SELECT * FROM topics WHERE";
+        $wordsToSearch = preg_split("/[\s,-]+/", $queryText);
+        foreach($wordsToSearch as $word){
+            $queryString .= " title LIKE '%".$word."%' AND";
+        }
+        $queryString .= " 1=1";
+        $query = $this->pdo->prepare($queryString);
+        $query->execute();
+        $data = $query->fetchAll();
+        if($data){
+            return ($data);
+        }
+        return null;
+    }
 
     function decreaseAnswers($id){
         $query = $this->pdo->prepare("UPDATE topics SET answers = answers-1 WHERE id LIKE :id");

@@ -5,7 +5,8 @@
             <ul class="nav">
                 <li><a href="./index.php?page=main">Home</a></li>
                 <li><a href="./index.php?page=new-topic">Create topic</a></li>
-                <li>About</li>
+                <li><a href="./index.php?page=allTopics">All topics</a></li>
+                <li><input type="text" id="searchInput" placeholder="Search..."/></li>
             </ul>
             <ul class="user-options">
                 <?php
